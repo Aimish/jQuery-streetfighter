@@ -12,7 +12,6 @@ $(document).ready(function() {
 		playHadouken();
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
-		//$('.hadouken').show();
 		$('.hadouken').finish().show()
 		.animate(
 			{'left': '300px'},
@@ -28,6 +27,27 @@ $(document).ready(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 	});
+});
+$(document).ready(function() {
+
+
+  $(document).keydown(function(event) {
+    if (event.which == 88) {
+   playEpic();
+    $('.ryu-still').hide();
+    $('.ryu-ready').hide();
+    $('.ryu-cool').show();
+  }
+  });
+  
+  $(document).keyup(function(event) {
+    if (event.which == 88) {
+      $('.ryu-cool').hide();
+      $('.ryu-still').show();
+
+    }
+  });
+
 });
 
 function playHadouken() {
